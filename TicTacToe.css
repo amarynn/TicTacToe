@@ -115,3 +115,18 @@ li {
     text-decoration: underline;
 }
 
+.clear-scores {
+    height: 100px;
+    width: 100px;
+    background-color: aquamarine;
+    font-weight: 900;
+    margin: 20px 20px 20px 20px;
+}
+
+.clear-gameboard {
+    height: 100px;
+    width: 100px;
+    background-color: aquamarine;
+    font-weight: 900;
+    margin: 20px 20px 20px 20px;
+}
