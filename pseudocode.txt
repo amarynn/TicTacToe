@@ -1,0 +1,18 @@
+Tic Tac Toe
+
+in html file
+create main, inside main create 1 section in the centre of the screen
+create 9 sections inside the larger section
+
+in css file
+use css to set the main section to be in the middle of the page
+use css to lay out 9 smaller sections to form a 3x3 grid with borders to seperate them
+create a class for player x and player o
+
+in js file
+create variable to track player turn that alternates between two different values
+create function to check if a player has won by checking all possible win conditions
+create function to alter the display if a player has won
+add eventlisteners to each of the 9 small boxes to detect when they are clicked
+if a small box is clicked and it doesn't already have a class of x or o, change its class to equal x or o depending on the player turn variable, and add a large X or O to indicate which player claimed the box
+ 
