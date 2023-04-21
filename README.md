@@ -25,7 +25,7 @@ A simple TicTacToe game for people to enjoy.
 - While mid-game, if you click and hold, then drag your cursor over a different playing box instead of just clicking, parts of the playing field disappears
 
 ## :notebook: Lessons learnt
-- Instead of trying to remove a class from an object to fix it running when its not supposed to, I learned to instead find a way to make it not run
+- Instead of trying to remove a class from an object to fix it running when its not supposed to, I learned to instead find a way to make its run condition false
 
 ## :white_check_mark: Future Features
 - Background Music 
