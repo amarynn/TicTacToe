@@ -125,11 +125,11 @@ li {
 }
 
 .player-X {
-    background-color: rgba(0, 56, 34, 0.1);
+    background-color: rgba(0, 56, 34, 0.01);
 }
 
 .player-O {
-    background-color: rgba(0, 56, 34, 0.1);
+    background-color: rgba(0, 56, 34, 0.01);
 }
 
 .winner {

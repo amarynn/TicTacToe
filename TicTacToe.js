@@ -1,3 +1,4 @@
+var musicStart = document.querySelector("html")
 var mainDisplay = document.querySelector("main")
 var winnerDisplay = document.querySelector(".winner")
 var resetMatch = document.querySelector(".clear-scores")
@@ -175,3 +176,11 @@ mainDisplay.addEventListener("click", function(event) {
         }
     }
 })
+
+musicStart.addEventListener("click", function() {
+    var audio = document.querySelector("audio")
+    audio.volume = 0.05
+    audio.loop = true
+    audio.play()
+})
+  
