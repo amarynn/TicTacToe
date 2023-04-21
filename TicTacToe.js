@@ -5,23 +5,21 @@ var resetMatch = document.querySelector(".clear-scores")
 var newGame = document.querySelector(".clear-gameboard")
 var xScore = document.querySelector("#X-score")
 var oScore = document.querySelector("#O-score")
+var topLeft = document.querySelector("#top-left")
+var topMiddle = document.querySelector("#top-middle")
+var topRight = document.querySelector("#top-right")
+var middleLeft = document.querySelector("#middle-left")
+var middleMiddle = document.querySelector("#middle-middle")
+var middleRight = document.querySelector("#middle-right")
+var bottomLeft = document.querySelector("#bottom-left")
+var bottomMiddle = document.querySelector("#bottom-middle")
+var bottomRight = document.querySelector("#bottom-right")
 var winner = ""
 var turnCount = 0
 
 function winCheck(){
-    var topLeft = document.querySelector("#top-left")
-    var topMiddle = document.querySelector("#top-middle")
-    var topRight = document.querySelector("#top-right")
 
-    var middleLeft = document.querySelector("#middle-left")
-    var middleMiddle = document.querySelector("#middle-middle")
-    var middleRight = document.querySelector("#middle-right")
-
-    var bottomLeft = document.querySelector("#bottom-left")
-    var bottomMiddle = document.querySelector("#bottom-middle")
-    var bottomRight = document.querySelector("#bottom-right")
-
-    if (topLeft.className === "player-X" && topMiddle.className === "player-X" && topRight.className === "player-X"){
+    if (topLeft.className === "player-X" && topMiddle.className === "player-X" && topRight.className === "player-X") {
         winner = "X"
         winDisplay()
     } else if (middleLeft.className === "player-X" && middleMiddle.className === "player-X" && middleRight.className === "player-X") {
@@ -45,7 +43,7 @@ function winCheck(){
     } else if (topRight.className === "player-X" && middleMiddle.className === "player-X" && bottomLeft.className === "player-X") {
         winner = "X"
         winDisplay()
-    } else if (topLeft.className === "player-O" && topMiddle.className === "player-O" && topRight.className === "player-O"){
+    } else if (topLeft.className === "player-O" && topMiddle.className === "player-O" && topRight.className === "player-O") {
         winner = "O"
         winDisplay()
     } else if (middleLeft.className === "player-O" && middleMiddle.className === "player-O" && middleRight.className === "player-O") {
@@ -76,7 +74,6 @@ function winCheck(){
 
 function winDisplay() {
     winnerDisplay.textContent = "The Winner is " + winner
-    mainDisplay.removeEventListener("click", function(event){})
     if (winner === "X") {
         xScore.textContent = Number(xScore.textContent) + 1
     } else {
@@ -87,6 +84,45 @@ function winDisplay() {
 function draw() {
     winnerDisplay.textContent = "Its a draw!!"
 }
+
+function clearBoard() {
+    topLeft.classList.remove("player-X", "player-O")
+    topMiddle.classList.remove("player-X", "player-O")
+    topRight.classList.remove("player-X", "player-O")
+    middleLeft.classList.remove("player-X", "player-O")
+    middleMiddle.classList.remove("player-X", "player-O")
+    middleRight.classList.remove("player-X", "player-O")
+    bottomLeft.classList.remove("player-X", "player-O")
+    bottomMiddle.classList.remove("player-X", "player-O")
+    bottomRight.classList.remove("player-X", "player-O")
+    topLeft.textContent = ""
+    topMiddle.textContent = ""
+    topRight.textContent = ""
+    middleLeft.textContent = ""
+    middleMiddle.textContent = ""
+    middleRight.textContent = ""
+    bottomLeft.textContent = ""
+    bottomMiddle.textContent = ""
+    bottomRight.textContent = ""
+    turnCount = 0
+    winner = ""
+    playerTurn = "X"
+    winnerDisplay.textContent = ""
+}
+
+function resetScores() {
+    xScore.textContent = 0
+    oScore.textContent = 0
+}
+
+newGame.addEventListener("click", function() {
+    clearBoard()
+})
+
+resetMatch.addEventListener("click", function () {
+    resetScores()
+    clearBoard()
+})
 
 mainDisplay.addEventListener("click", function(event) {
     var clickTarget = event.target
