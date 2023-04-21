@@ -1,10 +1,10 @@
-var playerTurn = "X"
 var mainDisplay = document.querySelector("main")
 var winnerDisplay = document.querySelector(".winner")
 var resetMatch = document.querySelector(".clear-scores")
 var newGame = document.querySelector(".clear-gameboard")
 var xScore = document.querySelector("#X-score")
 var oScore = document.querySelector("#O-score")
+var turnDisplay = document.querySelector(".player-turn-display")
 var topLeft = document.querySelector("#top-left")
 var topMiddle = document.querySelector("#top-middle")
 var topRight = document.querySelector("#top-right")
@@ -14,6 +14,8 @@ var middleRight = document.querySelector("#middle-right")
 var bottomLeft = document.querySelector("#bottom-left")
 var bottomMiddle = document.querySelector("#bottom-middle")
 var bottomRight = document.querySelector("#bottom-right")
+var playerTurn = "X"
+turnDisplay.textContent = playerTurn + "'s Turn"
 var winner = ""
 var turnCount = 0
 
@@ -73,7 +75,7 @@ function winCheck(){
 }
 
 function winDisplay() {
-    winnerDisplay.textContent = "The Winner is " + winner
+    winnerDisplay.textContent = "The Winner is " + winner + "!"
     if (winner === "X") {
         xScore.textContent = Number(xScore.textContent) + 1
     } else {
@@ -107,6 +109,7 @@ function clearBoard() {
     turnCount = 0
     winner = ""
     playerTurn = "X"
+    turnDisplay.textContent = playerTurn + "'s Turn"
     winnerDisplay.textContent = ""
 }
 
@@ -135,12 +138,14 @@ mainDisplay.addEventListener("click", function(event) {
                 turnCount += 1
                 winCheck()
                 playerTurn = "O"
+                turnDisplay.textContent = playerTurn + "'s Turn"
             } else if (playerTurn === "O" && clickTarget.className !== "player-X") {
                 clickTarget.classList.add("player-O")
                 clickTarget.textContent = "O"
                 turnCount += 1
                 winCheck()
                 playerTurn = "X"
+                turnDisplay.textContent = playerTurn + "'s Turn"
             }
         }
     }

@@ -17,6 +17,13 @@ main {
 h1 {
     text-align: center;
     font-size: 4rem;
+    text-transform: capitalize;
+    margin-bottom: 0px;
+}
+
+.player-turn-display {
+    text-align: center;
+    font-size: 1.5rem;
 }
 
 ul {
@@ -128,7 +135,7 @@ li {
     width: 100px;
     background-color: aquamarine;
     font-weight: 900;
-    margin: 176px 20px 20px 20px;
+    margin: 196px 20px 20px 20px;
 }
 
 .clear-gameboard {
@@ -136,7 +143,7 @@ li {
     width: 100px;
     background-color: aquamarine;
     font-weight: 900;
-    margin: 176px 20px 20px 20px;
+    margin: 196px 20px 20px 20px;
 }
 
 #scores {
