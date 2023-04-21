@@ -21,55 +21,79 @@ var turnCount = 0
 
 function winCheck(){
 
-    if (topLeft.className === "player-X" && topMiddle.className === "player-X" && topRight.className === "player-X") {
-        winner = "X"
-        winDisplay()
-    } else if (middleLeft.className === "player-X" && middleMiddle.className === "player-X" && middleRight.className === "player-X") {
-        winner = "X"
-        winDisplay()
-    } else if (bottomLeft.className === "player-X" && bottomMiddle.className === "player-X" && bottomRight.className === "player-X") {
-        winner = "X"
-        winDisplay()
-    } else if (topLeft.className === "player-X" && middleLeft.className === "player-X" && bottomLeft.className === "player-X") {
-        winner = "X"
-        winDisplay()
-    } else if (topMiddle.className === "player-X" && middleMiddle.className === "player-X" && bottomMiddle.className === "player-X") {
-        winner = "X"
-        winDisplay()
-    } else if (topRight.className === "player-X" && middleRight.className === "player-X" && bottomRight.className === "player-X") {
-        winner = "X"
-        winDisplay()
-    } else if (topLeft.className === "player-X" && middleMiddle.className === "player-X" && bottomRight.className === "player-X") {
-        winner = "X"
-        winDisplay()
-    } else if (topRight.className === "player-X" && middleMiddle.className === "player-X" && bottomLeft.className === "player-X") {
-        winner = "X"
-        winDisplay()
-    } else if (topLeft.className === "player-O" && topMiddle.className === "player-O" && topRight.className === "player-O") {
-        winner = "O"
-        winDisplay()
-    } else if (middleLeft.className === "player-O" && middleMiddle.className === "player-O" && middleRight.className === "player-O") {
-        winner = "O"
-        winDisplay()
-    } else if (bottomLeft.className === "player-O" && bottomMiddle.className === "player-O" && bottomRight.className === "player-O") {
-        winner = "O"
-        winDisplay()
-    } else if (topLeft.className === "player-O" && middleLeft.className === "player-O" && bottomLeft.className === "player-O") {
-        winner = "O"
-        winDisplay()
-    } else if (topMiddle.className === "player-O" && middleMiddle.className === "player-O" && bottomMiddle.className === "player-O") {
-        winner = "O"
-        winDisplay()
-    } else if (topRight.className === "player-O" && middleRight.className === "player-O" && bottomRight.className === "player-O") {
-        winner = "O"
-        winDisplay()
-    } else if (topLeft.className === "player-O" && middleMiddle.className === "player-O" && bottomRight.className === "player-O") {
-        winner = "O"
-        winDisplay()
-    } else if (topRight.className === "player-O" && middleMiddle.className === "player-O" && bottomLeft.className === "player-O") {
-        winner = "O"
-        winDisplay()
-    } else if (turnCount === 9) {
+    if (topLeft.className === "player-X") {
+        if (topMiddle.className === "player-X" && topRight.className === "player-X") {
+            winner = "X"
+            winDisplay()
+        } else if ( middleLeft.className === "player-X" && bottomLeft.className === "player-X") {
+            winner = "X"
+            winDisplay()
+        }
+    }
+
+    if (bottomRight.className === "player-X") {
+        if (bottomMiddle.className === "player-X" && bottomLeft.className === "player-X") {
+            winner = "X"
+            winDisplay()
+        } else if (middleRight.className === "player-X" && topRight.className === "player-X") {
+            winner = "X"
+            winDisplay()
+        }
+    }
+
+    if (middleMiddle.className === "player-X") {
+        if (middleLeft.className === "player-X" && middleRight.className === "player-X") {
+            winner = "X"
+            winDisplay()
+        } else if ( topLeft.className === "player-X" && bottomRight.className === "player-X") {
+            winner = "X"
+            winDisplay()
+        } else if (topMiddle.className === "player-X" && bottomMiddle.className === "player-X") {
+            winner = "X"
+            winDisplay()
+        } else if (topRight.className === "player-X" && bottomLeft.className === "player-X") {
+            winner = "X"
+            winDisplay()
+        }
+    }
+
+    if (topLeft.className === "player-O") {
+        if (topMiddle.className === "player-O" && topRight.className === "player-O") {
+            winner = "O"
+            winDisplay()
+        } else if ( middleLeft.className === "player-O" && bottomLeft.className === "player-O") {
+            winner = "O"
+            winDisplay()
+        }
+    }
+
+    if (bottomRight.className === "player-O") {
+        if (bottomMiddle.className === "player-O" && bottomLeft.className === "player-O") {
+            winner = "O"
+            winDisplay()
+        } else if (middleRight.className === "player-O" && topRight.className === "player-O") {
+            winner = "O"
+            winDisplay()
+        }
+    }
+
+    if (middleMiddle.className === "player-O") {
+        if (middleLeft.className === "player-O" && middleRight.className === "player-O") {
+            winner = "O"
+            winDisplay()
+        } else if ( topLeft.className === "player-O" && bottomRight.className === "player-O") {
+            winner = "O"
+            winDisplay()
+        } else if (topMiddle.className === "player-O" && bottomMiddle.className === "player-O") {
+            winner = "O"
+            winDisplay()
+        } else if (topRight.className === "player-O" && bottomLeft.className === "player-O") {
+            winner = "O"
+            winDisplay()
+        }
+    }
+
+    if (turnCount === 9 && winner === "") {
         draw()
     }
 }
@@ -84,6 +108,7 @@ function winDisplay() {
 }
 
 function draw() {
+    winner = "draw"
     winnerDisplay.textContent = "Its a draw!!"
 }
 
