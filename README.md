@@ -1,7 +1,7 @@
 # TicTacToe
 A simple TicTacToe game for people to enjoy.
 
-## :computer: [Click here](#) to see my live project!
+## :computer: [Click here](https://amarynn.github.io/TicTacToe/) to see my live project!
 
 ## :page_facing_up: About
 - A TicTacToe game where you take turns clicking in the game interface to try and get 3 in a row to win
