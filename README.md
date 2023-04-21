@@ -11,7 +11,7 @@ A simple TicTacToe game for people to enjoy.
 ![pseudocode picture](./TicTacToePseudoCode.png)
 - Set up a baseplate page for it to work on with a simple playing grid without having it display as a single line across the top of the page.
 - Struggled to code in a way to prevent the user/s from adding more X's or O's after one player had won, initially thought to remove the on-click functionality, but ended up resolving the issue by implementing code that prevented the on-click from running if a player had won.
-- Had an issue where I wasn't able to clear the classes or remove the content from the playing grid, I was checking through the source pages on the browser to see if my code had an error, and found that the variables for the playing grid weren't global variables, so I had to simply move them out of a function and my reset buttons started working as intended.
+- Had an issue where I wasn't able to clear the classes or remove the content from the playing grid, I was checking through the source pages on the browser to see if my code had an error, and found that the variables for the playing grid weren't global variables, so I had to simply make them global variables and my reset buttons started working as intended.
 - Checking for a player win was running many repetitive checks to test every possible solution, I struggled to find a way that I could rewrite the check so that it would be less repetitive. I eventually found a way to write it so it only performs most of the checks if a certain prerequisite is met beforehand.
 
 ## :rocket: Cool tech
