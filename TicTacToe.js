@@ -1,6 +1,10 @@
 var playerTurn = "X"
 var mainDisplay = document.querySelector("main")
 var winnerDisplay = document.querySelector(".winner")
+var resetMatch = document.querySelector(".clear-scores")
+var newGame = document.querySelector(".clear-gameboard")
+var xScore = document.querySelector("#X-score")
+var oScore = document.querySelector("#O-score")
 var winner = ""
 var turnCount = 0
 
@@ -73,6 +77,11 @@ function winCheck(){
 function winDisplay() {
     winnerDisplay.textContent = "The Winner is " + winner
     mainDisplay.removeEventListener("click", function(event){})
+    if (winner === "X") {
+        xScore.textContent = Number(xScore.textContent) + 1
+    } else {
+        oScore.textContent = Number(oScore.textContent) + 1
+    }
 }
 
 function draw() {
