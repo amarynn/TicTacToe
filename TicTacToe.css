@@ -130,3 +130,20 @@ li {
     font-weight: 900;
     margin: 20px 20px 20px 20px;
 }
+
+#scores {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+#x-score-text {
+    margin: 20px;
+    font-size: 1.5rem;
+}
+
+#o-score-text {
+    margin: 20px;
+    font-size: 1.5rem;
+}
