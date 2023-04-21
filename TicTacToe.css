@@ -1,7 +1,13 @@
+html {
+    background-image: url(./background.png);
+    background-size: cover;
+}
+
 body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    color: white;
 }
 
 main {
@@ -9,9 +15,10 @@ main {
     flex-direction: column;
     justify-content: center;
     margin: 0;
-    padding: 0;
+    padding: 50px 0px 0px 0px;
     font-size: 5rem;
     font-weight: 900;
+    background-color: rgba(0, 56, 34, 0.681);
 }
 
 h1 {
@@ -19,11 +26,13 @@ h1 {
     font-size: 4rem;
     text-transform: capitalize;
     margin-bottom: 0px;
+    color: black;
 }
 
 .player-turn-display {
     text-align: center;
     font-size: 1.5rem;
+    color: black;
 }
 
 ul {
@@ -59,53 +68,53 @@ li {
 }
 
 #top-left {
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+    border-right: 5px solid rgb(255, 255, 255);
+    border-bottom: 5px solid rgb(255, 255, 255);
     height: 100px;
     width: 100px;
 }
 
 #top-middle {
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+    border-right: 5px solid rgb(255, 255, 255);
+    border-bottom: 5px solid rgb(255, 255, 255);
     height: 100px;
     width: 100px;
 }
 
 #top-right {
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid rgb(255, 255, 255);
     height: 100px;
     width: 100px;
 }
 
 #middle-left {
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+    border-right: 5px solid rgb(255, 255, 255);
+    border-bottom: 5px solid rgb(255, 255, 255);
     height: 100px;
     width: 100px;
 }
 
 #middle-middle {
-    border-right: 5px solid black;
-    border-bottom: 5px solid black;
+    border-right: 5px solid rgb(255, 255, 255);
+    border-bottom: 5px solid rgb(255, 255, 255);
     height: 100px;
     width: 100px;
 }
 
 #middle-right {
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid rgb(255, 255, 255);
     height: 100px;
     width: 100px;
 }
 
 #bottom-left {
-    border-right: 5px solid black;
+    border-right: 5px solid rgb(255, 255, 255);
     height: 100px;
     width: 100px;
 }
 
 #bottom-middle {
-    border-right: 5px solid black;
+    border-right: 5px solid rgb(255, 255, 255);
     height: 100px;
     width: 100px;
 }
@@ -116,11 +125,11 @@ li {
 }
 
 .player-X {
-    background-color: white;
+    background-color: rgba(0, 56, 34, 0.1);
 }
 
 .player-O {
-    background-color: white;
+    background-color: rgba(0, 56, 34, 0.1);
 }
 
 .winner {
@@ -128,22 +137,25 @@ li {
     font-weight: 900;
     text-decoration: underline;
     text-align: center;
+    margin: 0;
+    padding: 48px 0px 48px 0px;
+    background-color: rgba(0, 56, 34, 0.681);
 }
 
 .clear-scores {
     height: 100px;
     width: 100px;
-    background-color: aquamarine;
+    background-color: rgba(127, 255, 212, 0.95);
     font-weight: 900;
-    margin: 196px 20px 20px 20px;
+    margin: 200px 20px 20px 20px;
 }
 
 .clear-gameboard {
     height: 100px;
     width: 100px;
-    background-color: aquamarine;
+    background-color: rgba(127, 255, 212, 0.95);
     font-weight: 900;
-    margin: 196px 20px 20px 20px;
+    margin: 200px 20px 20px 20px;
 }
 
 #scores {
@@ -151,6 +163,7 @@ li {
     flex-direction: row;
     justify-content: center;
     text-align: center;
+    background-color: rgba(0, 56, 34, 0.681);
 }
 
 #x-score-text {
