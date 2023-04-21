@@ -135,7 +135,7 @@ function clearBoard() {
     winner = ""
     playerTurn = "X"
     turnDisplay.textContent = playerTurn + "'s Turn"
-    winnerDisplay.textContent = ""
+    winnerDisplay.textContent = " "
 }
 
 function resetScores() {

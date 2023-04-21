@@ -18,7 +18,7 @@ main {
     padding: 50px 0px 0px 0px;
     font-size: 5rem;
     font-weight: 900;
-    background-color: rgba(0, 56, 34, 0.681);
+    background-color: rgba(0, 32, 19, 0.681);
 }
 
 h1 {
@@ -139,7 +139,8 @@ li {
     text-align: center;
     margin: 0;
     padding: 48px 0px 48px 0px;
-    background-color: rgba(0, 56, 34, 0.681);
+    height: 55px;
+    background-color: rgba(0, 32, 19, 0.681);
 }
 
 .clear-scores {
@@ -163,7 +164,7 @@ li {
     flex-direction: row;
     justify-content: center;
     text-align: center;
-    background-color: rgba(0, 56, 34, 0.681);
+    background-color: rgba(0, 32, 19, 0.681);
 }
 
 #x-score-text {
