@@ -155,19 +155,19 @@ resetMatch.addEventListener("click", function () {
 
 mainDisplay.addEventListener("click", function(event) {
     var clickTarget = event.target
-    
+
     if (winner === "") {
-        if (clickTarget.tagName === "LI" && clickTarget.className !== "player-X" || clickTarget.className !== "player-O") {
+        if (clickTarget.tagName === "LI" && (clickTarget.className !== "player-X" || clickTarget.className !== "player-O")) {
             if (playerTurn === "X" && clickTarget.className !== "player-O") {
                 clickTarget.classList.add("player-X")
-                clickTarget.textContent = "X"
+                clickTarget.innerText = "X"
                 turnCount += 1
                 winCheck()
                 playerTurn = "O"
                 turnDisplay.textContent = playerTurn + "'s Turn"
             } else if (playerTurn === "O" && clickTarget.className !== "player-X") {
                 clickTarget.classList.add("player-O")
-                clickTarget.textContent = "O"
+                clickTarget.innerText = "O"
                 turnCount += 1
                 winCheck()
                 playerTurn = "X"
