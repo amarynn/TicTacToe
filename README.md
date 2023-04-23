@@ -5,6 +5,7 @@ A simple TicTacToe game for people to enjoy.
 
 ## :page_facing_up: About
 - A TicTacToe game where you take turns clicking in the game interface to try and get 3 in a row to win.
+- Buttons on screen for users to reset the game board or reset the board and scores
 
 ## :pencil2: Planning & Problem Solving
 - Initially make pseudocode to work through the app functionality and plan how to make it work.
