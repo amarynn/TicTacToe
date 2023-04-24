@@ -16,6 +16,10 @@ A simple TicTacToe game for people to enjoy.
 - Checking for a player win was running many repetitive checks to test every possible solution, I struggled to find a way that I could rewrite the check so that it would be less repetitive. I eventually found a way to write it so it only performs most of the checks if a certain prerequisite is met beforehand.
 - A bug in the code that caused the game board to break and disappear, went through a number of tests, including checking the target of what you click and checking the conditions for players to add their piece to the game board. Eventually found the issue which was that the parathesis around the player's click target conditions was missing, causing the program to bypass one of the other conditions and allow you to unintentionally alter the core page layout.
 
+## :star2: Potential Improvements
+- Parts of the Javascript could be improved via reducing the overall code, instead of manually writing a check for every possible method of winning for a player, instead these methods could be saved in an array to be accessed and compared to in a much less code bloating way than writing each check.
+- The User interface could be improved with additional features, for example, allowing the user to choose who goes first with a button, allowing the user to have basic customization of their game piece and choose from a preset selection.
+
 ## :rocket: Cool tech
 - Created with html, css and javascript.
 - Once a player wins it is announced on the page.
